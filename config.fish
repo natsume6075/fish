@@ -2,8 +2,6 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-alias vim='nvim'
-
 # set -g theme_display_git no
 # set -g theme_display_git_dirty no
 # set -g theme_display_git_untracked no
