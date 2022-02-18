@@ -1,1 +1,1 @@
-set -x DROPBOX /mnt/c/Users/natsu/Dropbox
+set -x WIN_HOME /mnt/c/Users/natsu/
