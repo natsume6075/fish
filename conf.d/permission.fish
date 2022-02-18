@@ -1,0 +1,2 @@
+chmod u+x ~/bin/*
+
