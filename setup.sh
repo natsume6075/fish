@@ -10,5 +10,5 @@ curl -L http://get.oh-my.fish | fish
 
 # theme 変更
 echo ""
-echo "if you want to change theme, type: omf install [theme_name(ex.agnoster)]"
+echo "if you want to change theme, type: omf install [theme_name(ex.pure)]"
 
