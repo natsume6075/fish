@@ -1,11 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 SCRIPT_DIR=$(cd $(dirname $0); pwd)
-echo $SCRIPT_DIR
 
 mkdir -p ~/.config/
-ln -sfv $SCRIPT_DIR ~/.config
+ln -sfv $SCRIPT_DIR ~/.config/
 
-echo "Install oh-my-fish?(y/[other])"
+echo "Install oh-my-fish? (y/[other])"
 read input
 if [ $input = 'y' ] ; then
     curl -L http://get.oh-my.fish | fish
