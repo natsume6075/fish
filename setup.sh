@@ -19,7 +19,7 @@ ln -sfv $SCRIPT_DIR ~/.config/
 
 # If necessary, install oh-my-fish.
 if ! GetConfirmation "Install oh-my-fish?" ; then
-    curl -L http://get.oh-my.fish | fish
+    curl -sSL http://get.oh-my.fish | fish
     echo "If you want to change theme, type: omf install [theme_name(ex.pure)]"
 fi
 
