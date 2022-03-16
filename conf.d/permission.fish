@@ -1,4 +1,4 @@
-if [ -e ~/bin ]; then
+if [ -e ~/bin ]
     chmod u+x ~/bin/*
 end
 
