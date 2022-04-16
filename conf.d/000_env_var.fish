@@ -1,2 +1,5 @@
-set -x SCRATCHES /home/natsume6075/scratches
+set -x SCRATCHES ~/scratches
+set -x BROWSER vivaldi.exe
+
+set -x PATH ~/.deno/bin $PATH
 
