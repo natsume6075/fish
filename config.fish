@@ -45,17 +45,22 @@ set -g fish_prompt_pwd_dir_length 4
 
 
 # 入れ子を避けつつ、shell 起動時に tmux と vim を起動する。
-if test "$NVIM_LISTEN_ADDRESS" = ""
+if test "$VSCODE_PID" = ""
     if test "$TMUX" = ""
-        # vim の外で shell が起動した && tmux に入っていない => tmux 起動して main セッションに入る、なければ作る。
+        # tmux に入っていない => tmux 起動して main セッションに入る、なければ作る。
         tmux a -t main
         set tmux_ret $status
         if test $tmux_ret = 1
             tmux new-session -s main
         end
     else
-        # vim の外で shell が起動した && tmux に入っている => vim 起動
-        vim
+        if test "$NVIM_LISTEN_ADDRESS" = ""
+            # vim の外で shell が起動した && tmux に入っている => vim 起動
+            vim
+        end
+    end
+else
+    if test "$NVIM_LISTEN_ADDRESS" = ""
+            vim -c terminal
     end
 end
-
